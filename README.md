@@ -191,6 +191,13 @@ POST /api/auth/register
   "password": "123456",
   "role": "admin"
 }
+
+{
+    "name":"Roy",
+    "email":"boy@email.com",
+    "password":"123456789",
+    "role":"delivery_boy"
+}
 ```
 
 ---
@@ -209,6 +216,13 @@ POST /api/auth/login
 {
   "email": "dev@gmail.com",
   "password": "123456"
+}
+
+{
+    
+    "email":"boy@email.com",
+    "password":"123456789"
+    
 }
 ```
 
@@ -249,11 +263,12 @@ GET /api/orders
 # Assignment APIs
 
 ## Assign Delivery Boy
+## Check Delivery's Boy Order
 
 ### Endpoint
 
 ```http
-POST /api/assignments/assign
+POST /api/assignments
 ```
 
 ### Sample Request
@@ -265,6 +280,9 @@ POST /api/assignments/assign
 }
 ```
 
+```http
+POST /api/assignments/delivery-boy/2
+```
 ---
 
 # Delivery Boy APIs
@@ -274,7 +292,7 @@ POST /api/assignments/assign
 ### Endpoint
 
 ```http
-GET /api/delivery-boy/orders
+GET /api/delivery-boy/my-orders
 ```
 
 ---
