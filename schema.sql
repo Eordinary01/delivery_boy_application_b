@@ -18,7 +18,7 @@ CREATE TABLE orders (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Assignments table (FIXED)
+-- Assignments table 
 CREATE TABLE assignments (
     id INT PRIMARY KEY AUTO_INCREMENT,
     order_id INT NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE assignments (
     FOREIGN KEY (delivery_boy) REFERENCES users(id)
 );
 
--- Refresh tokens table (FIXED)
+-- Refresh tokens table 
 CREATE TABLE refresh_tokens (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
